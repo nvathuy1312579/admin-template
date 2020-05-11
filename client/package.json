@@ -1,0 +1,86 @@
+{
+  "name": "lora-admin",
+  "version": "1.0.0",
+  "description": "Lora Admin Page",
+  "author": "Thuy Nguyen (anhthuy2908@gmail.com)",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.13",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.52",
+    "@material-ui/styles": "^4.9.13",
+    "chartist": "0.10.1",
+    "perfect-scrollbar": "1.4.0",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "clsx": "^1.1.0",
+    "history": "^4.10.1",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-chartist": "0.13.3",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.0.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-swipeable-views": "0.13.3",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@hot-loader/react-dom": "^16.13.0",
+    "@testing-library/dom": "^7.2.2",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.4",
+    "babel-preset-react-app": "^9.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "jest": "^24.9.0",
+    "prettier": "^2.0.5",
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "react-app-rewired": "^2.1.6",
+    "react-hot-loader": "^4.12.21",
+    "react-test-renderer": "^16.13.1",
+    "redux-mock-store": "^1.5.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "test-cover": "react-app-rewired test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "fix": "yarn lint --fix",
+    "intl": "NODE_ENV=development node ./scripts/extract-intl-messages.js",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" src/"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000/",
+  "keywords": [
+    "react",
+    "redux-thunk",
+    "react-router",
+    "axios"
+  ]
+}

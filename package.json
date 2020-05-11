@@ -1,0 +1,38 @@
+{
+  "name": "lora-admin",
+  "version": "1.0.0",
+  "description": "Lora Admin",
+  "author": "anhthuy2908@gmail.com",
+  "private": true,
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev:server": "cd client && yarn build && cd .. && yarn start",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "preinstall": "cd client && yarn",
+    "build": "BUILD_ENV=prod node build.js",
+    "build:dev": "BUILD_ENV=dev node build.js",
+    "build:qc": "BUILD_ENV=qc node build.js",
+    "build:stag": "BUILD_ENV=stag node build.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.3",
+    "tar": "^6.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.3",
+    "nodemon": "^2.0.2"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "create-react-app"
+  ]
+}
