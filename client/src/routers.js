@@ -48,15 +48,15 @@ export default function Routes() {
           token ? (
             React.createElement(component, props)
           ) : (
-              <Redirect
-                to={{
-                  pathname: '/login',
-                  state: {
-                    from: props.location,
-                  },
-                }}
-              />
-            )
+            <Redirect
+              to={{
+                pathname: '/login',
+                state: {
+                  from: props.location,
+                },
+              }}
+            />
+          )
         }
       />
     );
@@ -76,8 +76,8 @@ export default function Routes() {
               }}
             />
           ) : (
-              React.createElement(component, props)
-            )
+            React.createElement(component, props)
+          )
         }
       />
     );

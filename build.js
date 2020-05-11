@@ -56,14 +56,19 @@ async function build() {
     console.log(new Date(), 'Start Build...');
     await writeFilePackage();
     console.log(new Date(), 'Install node_modules');
+    // yarn install
     await spawn('yarn');
+    // yarn cd client yarn install
     await spawn('yarn', [], { cwd: 'client' });
     console.log(new Date(), 'Build client');
+
+    // yarn cd client yarn build:prod
     await spawn('yarn', ['build'], {
       cwd: 'client',
       env: { ...process.env, REACT_APP_STAGE: stage },
     });
 
+    // yarn build client
     console.log(new Date(), 'Compress project');
     await compress();
     console.log(new Date(), 'Build Succeeded!');
