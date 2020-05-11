@@ -54,8 +54,9 @@ function writeFilePackage() {
 async function build() {
   try {
     console.log(new Date(), 'Start Build...');
-    await writeFilePackage();
+    // await writeFilePackage();
     console.log(new Date(), 'Install node_modules');
+
     // yarn install
     await spawn('yarn');
     // yarn cd client yarn install
@@ -70,7 +71,7 @@ async function build() {
 
     // yarn build client
     console.log(new Date(), 'Compress project');
-    await compress();
+    // await compress();
     console.log(new Date(), 'Build Succeeded!');
   } catch (error) {
     console.log(new Date(), 'Build Error!', error);
